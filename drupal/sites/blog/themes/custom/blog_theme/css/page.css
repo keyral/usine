@@ -1,0 +1,10 @@
+/* line 2, ../sass/page.scss */
+#page h1 {
+  background-color: black;
+  color: #ffffff;
+}
+/* line 6, ../sass/page.scss */
+#page a {
+  color: blue;
+  background-color: green;
+}
