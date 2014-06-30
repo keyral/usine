@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the blog_billet feature.
+ */
+
+include_once 'blog_billet.features.inc';
