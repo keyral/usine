@@ -5,3 +5,31 @@
  */
 
 include_once 'blog_billet.features.inc';
+
+/**
+ * Implements hook_menu.
+ * @return array
+ */
+function blog_billet_menu(){
+    $items = array();
+    $items['billets'] = array(
+        'title' => 'Update items',
+        'page callback' => 'blog_billet_views',
+        'access arguments' => array('view all articles'),
+        'file' => 'include/blog_billet.view.inc',
+    );
+
+    return $items;
+}
+
+/**
+ * Implements hook_permission
+ * @return array
+ */
+function blog_billet_permission() {
+    return array(
+        'view all articles' => array(
+            'title' => t('View articles'),
+        ),
+    );
+}

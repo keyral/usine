@@ -25,7 +25,7 @@ function blog_billet_image_default_styles() {
         'module' => 'image',
         'name' => 'image_crop',
         'data' => array(
-          'width' => 800,
+          'width' => 750,
           'height' => 180,
           'anchor' => 'center-center',
         ),

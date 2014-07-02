@@ -1,7 +1,8 @@
 name = blog_billet
 description = module features pour les billets
 core = 7.x
-package = Features
+package = Blog
+dependencies[] = entity
 dependencies[] = features
 dependencies[] = image
 dependencies[] = node
