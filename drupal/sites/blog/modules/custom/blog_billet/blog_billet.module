@@ -13,7 +13,7 @@ include_once 'blog_billet.features.inc';
 function blog_billet_menu(){
     $items = array();
     $items['billets'] = array(
-        'title' => 'Update items',
+        'title' => 'All billets',
         'page callback' => 'blog_billet_views',
         'access arguments' => array('view all articles'),
         'file' => 'include/blog_billet.view.inc',
