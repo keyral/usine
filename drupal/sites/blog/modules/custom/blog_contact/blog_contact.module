@@ -32,3 +32,9 @@ function blog_contact_permission()
         ),
     );
 }
+
+function blog_contact_form_alter(&$form, &$form_state, $form_id) {
+    if ($form_id == '_contact_form') {
+        $form['#theme'] = array('blog_form_contact');
+    }
+}

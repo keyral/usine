@@ -21,7 +21,9 @@ function blog_theme_theme($existing, $type, $theme, $path) {
     // Custom template to form contact
     $items['blog_form_contact'] = array(
         'render element' => 'form',
-        'path' => drupal_get_path('module', 'blog_contact') . '/templates/form--contact',
+        'path' => drupal_get_path('module', 'blog_contact') . '/templates/',
+        'template' => 'form--contact',
+        'arguments' => array('form' => NULL),
     );
     return $items;
 }
