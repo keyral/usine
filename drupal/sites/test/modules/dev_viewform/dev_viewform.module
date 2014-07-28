@@ -1,0 +1,87 @@
+<?php
+/**
+ * @file
+ * File to module blog_contact
+ */
+
+/**
+ * Implements hook_menu()
+ */
+function dev_viewform_menu()
+{
+    $items = array();
+    $items['test_form'] = array(
+        'title' => 'test view form',
+        'page callback' => '_dev_viewform_view',
+        'access arguments' => array('access content'),
+        'file' => 'include/dev_viewform.view.inc',
+    );
+
+    return $items;
+}
+
+
+
+function dev_viewform(){
+    $form = array();
+    $form['name'] = array(
+        '#type' => 'textfield',
+        '#title' => t('name'),
+        '#description' => t('info a la con'),
+        '#default_value' => "qu'elle es ton name ?",
+    );
+    $form['surname'] = array(
+        '#type' => 'textfield',
+        '#title' => t('surname'),
+        '#description' => t('info a la con'),
+        '#default_value' => "qu'elle es ton surnamename ?",
+    );
+    $form['rome1'] = array(
+        '#type' => 'textfield',
+        '#title' => t('rom'),
+        '#description' => t('info a la con'),
+        '#default_value' => "prout",
+    );
+    $form['rome2'] = array(
+        '#type' => 'textfield',
+        '#title' => t('rom'),
+        '#description' => t('info a la con'),
+        '#default_value' => "prout",
+    );
+    $form['rome3'] = array(
+        '#type' => 'textfield',
+        '#title' => t('rom'),
+        '#description' => t('info a la con'),
+        '#default_value' => "prout",
+    );
+    $form['rome4'] = array(
+        '#type' => 'textfield',
+        '#title' => t('rom'),
+        '#description' => t('info a la con'),
+        '#default_value' => "prout",
+    );
+    $form['op'] = array(
+        '#value' => t('Submit'),
+        '#type' => 'submit',
+    );
+return $form;
+}
+
+function dev_viewform_submit($form, &$form_state){
+   drupal_set_message('je suis un dieux vivant');
+}
+function dev_viewform_theme() {
+    return array(
+        'custom_form1' => array(
+            'render element' => 'form',
+            'variables' => array('form' => NULL),
+            'template' =>  'template/custom_form1',
+        ),
+
+        'custom_form2' => array(
+            'render element' => 'form',
+            'variables' => array('form' => NULL),
+            'template' =>  'template/custom_form2',
+        ),
+    );
+}

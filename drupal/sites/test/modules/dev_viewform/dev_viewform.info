@@ -1,0 +1,4 @@
+name = dev_viewform
+description = test de templating en view mode avec form
+core = 7.x
+package = test
