@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * File to module blog_contact
+ */
+
+/**
+ * Implements hook_menu()
+ */
+function blog_contact_menu()
+{
+    $items = array();
+    $items['contact'] = array(
+        'title' => 'Contact',
+        'page callback' => '_blog_contact_view',
+        'access arguments' => array('blog contact'),
+        'file' => 'include/blog_contact.view.inc',
+    );
+
+    return $items;
+}
+
+/**
+ * Implements hook_permission
+ * @return array
+ */
+function blog_contact_permission()
+{
+    return array(
+        'blog contact' => array(
+            'title' => t('View page contact'),
+        ),
+    );
+}
