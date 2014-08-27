@@ -57,4 +57,5 @@ $sites = array(
     //url to dev
     'blog.dev' => 'blog',
     'test.dev' => 'test',
+    'test2.dev' => 'blog',
 );
